@@ -1,0 +1,246 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Chewy', cursive;
+  }
+  
+  .background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ajustamos el índice Z para que esté detrás del contenido */
+  }
+  
+  .background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5; /* Opacidad del 50% */
+  }
+  
+  .header {
+    position: relative; /* Ajustamos la posición para que el header no quede detrás de la imagen de fondo */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo del header con opacidad */
+    padding: 20px;
+    font-family: 'Chewy', cursive
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 100px; /* Ajusta el tamaño del logotipo según tus necesidades */
+    height: auto;
+    border-radius: 50%;
+    background-color: white; /* Cambia esto al color de fondo deseado */
+  }
+  
+  .title {
+    color: white;
+    margin-left: 20px; /* Espacio entre el logotipo y el título */
+  }
+  
+  .content {
+    position: relative; /* Ajustamos la posición para que el botón se posicione correctamente */
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .content {
+    margin-right: 5px; /* Ajusta el margen entre los botones */
+  }
+
+  .play-button, .mapa, .reglas {
+    padding: 15px 40px;
+    font-size: 20px;
+    background-color: #007bff; /* Color del botón */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 180px; /* Ajusta el ancho de los botones */
+  }
+
+  .play-button:hover, .mapa:hover {
+    background-color: #0056b3; /* Color del botón al pasar el ratón */
+  }
+
+ /* Estilos previos mantienen los mismos */
+
+.content {
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .play-button {
+    padding: 15px 40px;
+    font-size: 20px;
+    background-color: #007bff; /* Color del botón */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .play-button:hover {
+    background-color: #0056b3; /* Color del botón al pasar el ratón */
+  }
+  
+  /* Estilos para el contenedor del carrusel */
+  .carousel-container {
+    width: 50%;
+    margin: 40px auto; /* Mayor separación con el footer */
+    border: 10px solid rgba(0, 0, 0, 0.8); /* Borde negro con opacidad del 80% */
+  }
+
+  /* Estilos para el footer */
+  .footer {
+    background-color: rgba(0, 0, 0, 0.8); /* Opacidad del 80% */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .descripcion {
+    background-color: rgba(255, 255, 255, 0.614); /* Blanco con 50% de opacidad */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px;
+    margin: 20px auto; /* Márgenes externos automáticos para centrarlo */
+    position: relative; /* Aseguramos que la descripción esté por encima del fondo */
+    z-index: 1; /* Aseguramos que la descripción esté por encima del fondo */
+    max-width: 600px; /* Establecemos una anchura máxima para el cuadro de la descripción */
+    text-align: justify; /* Justificamos el texto dentro del cuadro de la descripción */
+    font-family: 'Chewy', cursive; /* Fuente externa "Chewy" */
+    font-size: 24px; /* Tamaño de fuente */
+    line-height: 1.6; /* Espaciado de línea */
+    color: #333; /* Color de texto */
+  }
+  
+  #boton {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+  }
+
+  .animate__swing{
+  animation-duration: 5s;
+  }
+
+  .animate__pulse{
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+
+  .small-image {
+      width: 300px; /* Establece el ancho deseado */
+      height: auto; /* Mantiene la proporción de aspecto */
+      float: left; /* Coloca la imagen a la izquierda */
+      margin-right: 20px; /* Espacio entre la imagen y el texto */
+      margin-top:100px;
+      margin-left:50px;
+    }
+
+    #rulesModal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 70%; /* Ancho del cuadro de reglas */
+      max-width: 600px; /* Ancho máximo del cuadro de reglas */
+      overflow: auto;
+    }
+    
+    #rulesModal .modal-content {
+      background-color: #d0f0c0; /* Fondo verde pastel claro */
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      font-family: 'Chewy', cursive;
+      font-size: 24px;
+      line-height: 1.6;
+      color: #333;
+      position: relative; /* Ajuste para centrar verticalmente */
+      top: 50%; /* Ajuste para centrar verticalmente */
+      transform: translateY(-50%); /* Ajuste para centrar verticalmente */
+    }
+    
+    #rulesModal .modal-title {
+      color: #007bff; /* Color azul para el título */
+      font-size: 28px; /* Tamaño de fuente del título */
+      margin-bottom: 20px; /* Espaciado inferior para separar el título del contenido */
+    }
+    
+    #rulesModal .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    
+    #rulesModal .close:hover,
+    #rulesModal .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        padding: 10px; /* Ajustamos el padding del encabezado */
+      }
+    
+      .logo {
+        width: 80px; /* Reducimos el tamaño del logotipo */
+      }
+    
+      .title {
+        margin-left: 10px; /* Reducimos el espacio entre el logotipo y el título */
+      }
+    
+      .play-button, .mapa, .reglas {
+        padding: 10px 30px; /* Ajustamos el padding de los botones */
+        font-size: 16px; /* Reducimos el tamaño de fuente de los botones */
+        width: 140px; /* Reducimos el ancho de los botones */
+        margin: 10px auto; /* Añadimos margen vertical y auto a los botones */
+        display: flex; /* Utilizamos flexbox */
+        justify-content: center; /* Centramos horizontalmente los botones */
+        align-items: center; /* Centramos verticalmente los botones */
+      }
+    
+      .carousel-container {
+        width: 80%; /* Reducimos el ancho del contenedor del carrusel */
+      }
+    
+      .descripcion {
+        font-size: 18px; /* Reducimos el tamaño de fuente de la descripción */
+        max-width: 400px; /* Reducimos la anchura máxima del cuadro de la descripción */
+      }
+    
+      .small-image {
+        display: none; /* Ocultamos la imagen pequeña */
+      }
+    
+      #rulesModal {
+        width: 90%; /* Reducimos el ancho del cuadro de reglas */
+        max-width: 400px; /* Reducimos el ancho máximo del cuadro de reglas */
+      }
+    
+      #rulesModal .modal-content {
+        font-size: 20px; /* Reducimos el tamaño de fuente del contenido modal */
+      }
+    
+      #rulesModal .modal-title {
+        font-size: 24px; /* Reducimos el tamaño de fuente del título modal */
+      }
+    }
